@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Diário Secreto ☾</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <span class="lua">☾</span>
+        <h1>Meu Diário Secreto</h1>
+        <p>Um cantinho só meu, longe do mundo.</p>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="cartao formulario-cartao">
+            <div class="titulo-secao">
+                <span>✧</span>
+                <h2>Querida, diário...</h2>
+            </div>
+
+            <p class="descricao">
+                Respire fundo. Aqui você pode ser quem realmente é.
+            </p>
+
+            <form id="formularioDiario">
+
+                <label for="titulo">Título da entrada</label>
+                <input
+                    type="text"
+                    id="titulo"
+                    placeholder="Uma lembrança, um pensamento..."
+                    maxlength="80"
+                    required
+                >
+
+                <label for="data">Data</label>
+                <input type="date" id="data" required>
+
+                <label for="humor">Como estou me sentindo?</label>
+                <select id="humor" required>
+                    <option value="">Escolha seu humor...</option>
+                    <option value="Feliz">♡ Feliz</option>
+                    <option value="Triste">☾ Triste</option>
+                    <option value="Ansiosa">✧ Ansiosa</option>
+                    <option value="Cansada">☁ Cansada</option>
+                    <option value="Tranquila">☆ Tranquila</option>
+                    <option value="Apaixonada">♥ Apaixonada</option>
+                    <option value="Pensativa">☽ Pensativa</option>
+                </select>
+
+                <label for="texto">Seus pensamentos</label>
+                <textarea
+                    id="texto"
+                    placeholder="Escreva aqui tudo o que está guardado no seu coração..."
+                    rows="7"
+                    maxlength="10000"
+                    required
+                ></textarea>
+
+                <button type="submit" class="botao-principal">
+                    Guardar no diário ♡
+                </button>
+
+            </form>
+
+            <p id="mensagem" class="mensagem" role="status"></p>
+        </section>
+
+        <section class="secao-entradas">
+            <div class="titulo-secao">
+                <span>☽</span>
+                <h2>Minhas lembranças</h2>
+            </div>
+
+            <p class="descricao">
+                Pequenos pedaços da sua história.
+            </p>
+
+            <div id="listaEntradas" class="lista-entradas"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito com carinho, para os seus dias e suas noites. ♡</p>
+        <span>✧ ☾ ✧</span>
+    </footer>
+
+</body>
+</html>
